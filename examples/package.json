@@ -4,17 +4,21 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "watch": "node ./scripts/watch-and-copy-src.js"
+    "watch": "node ./scripts/watch-and-copy-src.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "react": "15.3.2",
     "react-native": "0.33.0",
-    "react-native-swiper-animated": "../"
+    "react-native-swiper-animated": "../",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "fs-extra": "^0.30.0",
     "minimatch": "^3.0.2",
     "node-watch": "^0.4.0",
     "rimraf": "^2.5.4"
-  }
+  },
+  "snyk": true
 }
